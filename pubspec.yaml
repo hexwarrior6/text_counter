@@ -1,6 +1,6 @@
 name: text_counter
 description: A lightweight Dart utility for counting characters and words in multiple languages including CJK, RTL, and mixed texts.
-version: 0.1.0
+version: 0.1.1
 repository: https://github.com/hexwarrior6/text_counter
 environment:
   sdk: '>=3.0.0 <4.0.0'
