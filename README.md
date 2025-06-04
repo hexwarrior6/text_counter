@@ -1,4 +1,12 @@
+English | [简体中文](README_zh-hans.md)
 # text_counter
+
+<p align="center">
+    <a href="https://github.com/hexwarrior6/text_counter"><img alt="GitHub repo" src="https://img.shields.io/github/last-commit/hexwarrior6/text_counter?logo=github"></a>
+    <a href="https://gitee.com/HexWarrior6/text_counter"><img alt="Gitee repo" src="https://img.shields.io/badge/Gitee-repo-red?logo=gitee"></a>
+    <a href="https://pub.dev/packages/text_counter"><img alt="pub version" src="https://img.shields.io/pub/v/text_counter?logo=dart"></a>
+    <a href="https://github.com/hexwarrior6/text_counter/blob/master/LICENSE"><img alt="LICENSE" src="https://img.shields.io/github/license/hexwarrior6/text_counter.svg?color=blue"></a>
+</p>
 
 A lightweight Dart utility for accurately counting characters and words in **over 100 languages**, including CJK (Chinese, Japanese, Korean), RTL (Right-to-Left) scripts like Arabic and Hebrew, and mixed-language texts.
 
@@ -23,7 +31,7 @@ Add this to your package's `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  text_counter: ^0.1.0
+  text_counter: ^0.1.2
 ```
 
 Then run:
@@ -54,11 +62,11 @@ void main() {
 
 ## 🗺️ Supported Languages
 
-| Script Type               | Language Codes                                               |
-| ------------------------- | ------------------------------------------------------------ |
-| **CJK (Character-based)** | `zh`, `yue`, `ja`, `ko`, `th`, `hi`, `bn`, `ta`, `te`, `kn`,`ml`, `si`, `km`, `my`, `lo`, `tl`, `jw`, `su`, `bo`, `dz` |
-| **RTL (Word-based)**      | `ml`, `si`, `km`, `my`, `lo`, `tl`, `jw`, `su`, `bo`, `dz`   |
-| **Latin (Word-based)**    | All other ISO 639-1 language codes not listed above, including: `en`,`de`,`es`,`fr`,`it`,`pt`,`nl`,`tr`,`pl`,`ca`,`sv`,`id`,`fi`,`vi`,`hi`,`uk`,`el`,`ms`,`cs`,`ro`,`da`,`hu`,`no`,`th`... |
+| Script Type               | Language Codes                                                                                                                                                                                                     |
+|---------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **CJK (Character-based)** | `zh`, `yue`, `ja`, `ko`, `th`, `hi`, `bn`, `ta`, `te`, `kn`,`ml`, `si`, `km`, `my`, `lo`, `tl`, `jw`, `su`, `bo`, `dz`                                                                                             |
+| **RTL (Word-based)**      | `ml`, `si`, `km`, `my`, `lo`, `tl`, `jw`, `su`, `bo`, `dz`                                                                                                                                                         |
+| **Latin (Word-based)**    | All other ISO 639-1 language codes not listed above, including: `en`, `de`, `es`, `fr`, `it`, `pt`, `nl`, `tr`, `pl`, `ca`, `sv`, `id`, `fi`, `vi`, `hi`, `uk`, `el`, `ms`, `cs`, `ro`, `da`, `hu`, `no`, `th` ... |
 
 > If no `languageCode` is provided, the library automatically detects script types and applies appropriate counting rules.
 
@@ -80,7 +88,7 @@ void main() {
 ## 📚 API Reference
 
 ```dart
-int TextCounter.count(String text, {String? languageCode});
+int TextCounter.count(String text, {String? languageCode})
 ```
 
 - `text`: The input string to be analyzed.

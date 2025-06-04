@@ -26,29 +26,38 @@ void main() {
     // --- 英文统计 ---
     test('English (en)', () {
       expect(TextCounter.count("Hello world", languageCode: "en"), equals(2));
-      expect(TextCounter.count("This is a test.", languageCode: "en"), equals(4));
-      expect(TextCounter.count("One   multiple     spaces", languageCode: "en"), equals(3));
+      expect(
+          TextCounter.count("This is a test.", languageCode: "en"), equals(4));
+      expect(TextCounter.count("One   multiple     spaces", languageCode: "en"),
+          equals(3));
     });
 
     // --- 阿拉伯语统计 ---
     test('Arabic (ar)', () {
       expect(TextCounter.count("مرحبا بالعالم", languageCode: "ar"), equals(2));
-      expect(TextCounter.count("كيف حالك اليوم؟", languageCode: "ar"), equals(3));
-      expect(TextCounter.count("السلام عليكم ورحمة الله", languageCode: "ar"), equals(4));
+      expect(
+          TextCounter.count("كيف حالك اليوم؟", languageCode: "ar"), equals(3));
+      expect(TextCounter.count("السلام عليكم ورحمة الله", languageCode: "ar"),
+          equals(4));
     });
 
     // --- 希伯来语统计 ---
     test('Hebrew (he)', () {
       expect(TextCounter.count("שלום עולם", languageCode: "he"), equals(2));
-      expect(TextCounter.count("מה שלומך היום?", languageCode: "he"), equals(3));
+      expect(
+          TextCounter.count("מה שלומך היום?", languageCode: "he"), equals(3));
       expect(TextCounter.count("תודה רבה לך", languageCode: "he"), equals(3));
     });
 
     // --- 自动识别混合文本 ---
     test('Mixed text detection', () {
-      expect(TextCounter.count("Hello 你好 مرحبا こんにちは"), equals(9)); // 1 + 2 + 1 + 1
-      expect(TextCounter.count("The quick brown fox jumps over the lazy dog. 你好吗"), equals(12));
-      expect(TextCounter.count("مرحبا Hello كيف الحال？こんにちは"), equals(10)); // ar + en + ar + ja
+      expect(TextCounter.count("Hello 你好 مرحبا こんにちは"),
+          equals(9)); // 1 + 2 + 1 + 1
+      expect(
+          TextCounter.count("The quick brown fox jumps over the lazy dog. 你好吗"),
+          equals(12));
+      expect(TextCounter.count("مرحبا Hello كيف الحال？こんにちは"),
+          equals(10)); // ar + en + ar + ja
     });
 
     // --- 边界测试 ---
@@ -59,7 +68,8 @@ void main() {
       expect(TextCounter.count(".,!@#\$% ^&*()"), equals(2)); // 标点加空格
       expect(TextCounter.count("   Hello   world   "), equals(2)); // 前后空格
       expect(TextCounter.count("你好,, 世界!!"), equals(6)); // 中文夹杂标点
-      expect(TextCounter.count("שלום־עולם", languageCode: "he"), equals(2)); // 希伯来连接符
+      expect(TextCounter.count("שלום־עולם", languageCode: "he"),
+          equals(2)); // 希伯来连接符
     });
   });
 }
