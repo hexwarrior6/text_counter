@@ -100,4 +100,4 @@ int TextCounter.count(String text, {String? languageCode})
 
 ## 📎 许可证
 
-MIT 许可证 - 详见 [LICENSE](https://yuanbao.tencent.com/chat/naQivTmsDa/LICENSE)
+MIT 许可证 - 详见 [LICENSE](LICENSE)
